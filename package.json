@@ -5,6 +5,7 @@
     "express": "latest",
     "body-parser": "latest",
     "tedious": "latest",
-    "edge": "latest"
+    "edge": "latest",
+    "edge-sql": "latest"
   }
 }
