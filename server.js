@@ -2,7 +2,7 @@ var app = require('express')();
 var bodyParser = require('body-parser');
 var util = require('util');
 var logger = function(req, res, next) {
-    console.log("GOT REQUEST !");
+    console.log(util.inspect(req.url));
     next(); // Passing the request to the next handler in the stack.
 };
 
