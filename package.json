@@ -6,7 +6,8 @@
     "body-parser": "latest",
     "tedious": "latest",
     "edge": "latest",
-    "edge-sql": "latest"
+    "edge-sql": "latest",
+    "koa-logger": "latest"
   },
   "engines": {
     "node": "6.10.0"

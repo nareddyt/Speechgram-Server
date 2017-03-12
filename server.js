@@ -1,19 +1,14 @@
 var app = require('express')();
 var bodyParser = require('body-parser');
 var util = require('util');
+const logger = require('koa-logger');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(logger);
+app.use(logger());
 
 var edge = require('edge');
 require('edge-sql');
-
-// Your own super cool function
-var logger = function(req, res, next) {
-    console.log("GOT REQUEST !");
-    next(); // Passing the request to the next handler in the stack.
-}
 
 app.get('/usersAdd', function(req, res) {
     console.log('GET with Query Params: ' + util.inspect(req.query));
